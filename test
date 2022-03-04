@@ -2,7 +2,7 @@ game:GetService("ReplicatedStorage").Unusual.Milo["__UNUSUALHIDE"].ImageLabel.Im
 
 game:GetService("ReplicatedStorage").ItemData.Images.UnusualIcons.Milo.Value = "rbxassetid://8397611379"
 
-game:GetService("Workspace").Username.UnusualAnimation["__UNUSUALHIDE"].ImageLabel.Image = "rbxassetid://8397611379"
+game:GetService("Workspace").VanishedTravlers.UnusualAnimation["__UNUSUALHIDE"].ImageLabel.Image = "rbxassetid://8397611379"
 
 local Config =
 {
