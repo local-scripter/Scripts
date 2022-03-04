@@ -6,14 +6,14 @@ game:GetService("Workspace").Username.UnusualAnimation["__UNUSUALHIDE"].ImageLab
 
 local Config =
 {
-    ProtectedName = "Sus", --What the protected name should be called. (Go to line 51)
-    OtherPlayers = false, --If other players should also have protected names.
-    OtherPlayersTemplate = "NameProtect", --Template for other players protected name (ex: "NamedProtect" will turn into "NameProtect1" for first player and so on)
-    RenameTextBoxes = false, --If TextBoxes should be renamed. (could cause issues with admin guis/etc)
-    UseFilterPadding = false, --If filtered name should be the same size as a regular name.
-    FilterPad = " ", --Character used to filter pad.
-    UseMetatableHook = true, --Use metatable hook to increase chance of filtering. (is not supported on wrappers like bleu)
-    UseAggressiveFiltering = true --Use aggressive property renaming filter. (renames a lot more but at the cost of lag)
+    ProtectedName = "Sus",
+    OtherPlayers = false, 
+    OtherPlayersTemplate = "NameProtect",
+    RenameTextBoxes = false, 
+    UseFilterPadding = false, 
+    FilterPad = " ", 
+    UseMetatableHook = true, 
+    UseAggressiveFiltering = true 
 }
 
 local ProtectedNames = {}
