@@ -28,7 +28,6 @@ for i, v in pairs(esc) do
     wait()
 end
 
--- Admin Teams --
 
 local player = game.Players.LocalPlayer
 print(player.Name)
@@ -199,4 +198,4 @@ game:GetService('RunService').Stepped:connect(function()
         game:GetService("Players").LocalPlayer.PlayerGui.GUI.Client.Variables.ammocount2.Value = 999
 end)
 
--- FE Dev Knives --
+-- where i left off --
