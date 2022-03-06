@@ -202,4 +202,5 @@ game:GetService('RunService').Stepped:connect(function()
         game:GetService("Players").LocalPlayer.PlayerGui.GUI.Client.Variables.ammocount2.Value = 999
 end)
 
+
 -- where i left off --
