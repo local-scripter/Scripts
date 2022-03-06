@@ -196,7 +196,7 @@ c.Value = 9e9
 elseif c.Name == "Auto" then
 c.Value = true
 elseif c.Name == "FireRate" or c.Name == "BFireRate" then
-c.Value = 0.20
+c.Value = 0.05
 end
 end
 end
