@@ -202,5 +202,7 @@ game:GetService('RunService').Stepped:connect(function()
         game:GetService("Players").LocalPlayer.PlayerGui.GUI.Client.Variables.ammocount2.Value = 999
 end)
 
+for i,v in pairs(game:GetService("ReplicatedStorage").wkspc:GetDescendants()) do if v.Name:lower():find("curse") then v.Value = "Fast Hands" end end
+
 
 -- where i left off --
