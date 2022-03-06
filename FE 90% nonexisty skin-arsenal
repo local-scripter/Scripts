@@ -182,7 +182,6 @@ end)
 for i,v in next, game.ReplicatedStorage.Weapons:GetChildren() do
 for i,c in next, v:GetChildren() do 
 for i,x in next, getconnections(c.Changed) do
-x:Disable() -- probably not needed
 end
 if c.Name == "Ammo" or c.Name == "StoredAmmo" then
 c.Value = 300 
