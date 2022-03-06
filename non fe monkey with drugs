@@ -1,1 +1,99 @@
 
+game.Players.LocalPlayer.Character.NerdHair:Destroy()
+game.Players.LocalPlayer.Character.FakeHead.Mesh.MeshId = "http://www.roblox.com/asset/?id=13636429"
+game.Players.LocalPlayer.Character.FakeHead.Mesh.TextureId = "http://www.roblox.com/asset/?id=13636445"
+game.Players.LocalPlayer.Character.Cap.Handle.Mesh.MeshId = "http://www.roblox.com/asset/?id="
+game.Players.LocalPlayer.Character.Cap.Handle.Mesh.Scale=Vector3.new(4.3, 4.3, 4.3)
+game.Players.LocalPlayer.Character.FakeHead.Mesh.Scale=Vector3.new(1.25, 1.25, 1.25)
+game.Players.LocalPlayer.Character.FakeHead.face:Destroy()
+game.Players.LocalPlayer.Character.Pants.PantsTemplate = "rbxassetid://1983315399"
+game.Players.LocalPlayer.Character.Shirt.ShirtTemplate = "http://www.roblox.com/asset/?id=2177773400"
+
+game.Players.LocalPlayer.Ragdoll.NerdHair:Destroy()
+game.Players.LocalPlayer.Ragdoll.Head.Mesh.MeshId = "http://www.roblox.com/asset/?id=13636429"
+game.Players.LocalPlayer.Ragdoll.Head.Mesh.TextureId = "http://www.roblox.com/asset/?id=13636445"
+game.Players.LocalPlayer.Ragdoll.Cap.Handle.Mesh.MeshId = "http://www.roblox.com/asset/?id="
+game.Players.LocalPlayer.Ragdoll.Cap.Handle.Mesh.Scale=Vector3.new(4.3, 4.3, 4.3)
+game.Players.LocalPlayer.Ragdoll.Head.Mesh.Scale=Vector3.new(1.25, 1.25, 1.25)
+game.Players.LocalPlayer.Ragdoll.Head.face:Destroy()
+game.Players.LocalPlayer.Ragdoll.Pants.PantsTemplate = "rbxassetid://1983315399"
+game.Players.LocalPlayer.Ragdoll.Shirt.ShirtTemplate = "http://www.roblox.com/asset/?id=2177773400"
+game.Players.LocalPlayer.Ragdoll.Head.Mesh.OriginalSize:Destroy()
+game.Players.LocalPlayer.Ragdoll.Cap.Handle.OriginalSize:Destroy()
+
+game.Players.LocalPlayer.Character.RightUpperArm.BrickColor = BrickColor.new("Reddish brown")
+game.Players.LocalPlayer.Character.RightLowerArm.BrickColor = BrickColor.new("Reddish brown")
+game.Players.LocalPlayer.Character.RightHand.BrickColor = BrickColor.new("Reddish brown")
+game.Players.LocalPlayer.Character.LeftUpperArm.BrickColor = BrickColor.new("Reddish brown")
+game.Players.LocalPlayer.Character.LeftLowerArm.BrickColor = BrickColor.new("Reddish brown")
+game.Players.LocalPlayer.Character.LeftHand.BrickColor = BrickColor.new("Reddish brown")
+
+
+game.ReplicatedStorage.StreamedAssets.ChrModels.Delinquent.NerdHair:Destroy()
+game.ReplicatedStorage.StreamedAssets.ChrModels.Delinquent.Head.Mesh.MeshId = "http://www.roblox.com/asset/?id=13636429"
+game.ReplicatedStorage.StreamedAssets.ChrModels.Delinquent.Head.Mesh.TextureId = "http://www.roblox.com/asset/?id=13636445"
+game.ReplicatedStorage.StreamedAssets.ChrModels.Delinquent.Cap.Handle.Mesh.MeshId = "http://www.roblox.com/asset/?id="
+game.ReplicatedStorage.StreamedAssets.ChrModels.Delinquent.Cap.Handle.Mesh.Scale=Vector3.new(4.3, 4.3, 4.3)
+game.ReplicatedStorage.StreamedAssets.ChrModels.Delinquent.Head.Mesh.Scale=Vector3.new(1.25, 1.25, 1.25)
+game.ReplicatedStorage.StreamedAssets.ChrModels.Delinquent.Head.Mesh.OriginalSize:Destroy()
+game.ReplicatedStorage.StreamedAssets.ChrModels.Delinquent.Cap.Handle.OriginalSize:Destroy()
+game.ReplicatedStorage.StreamedAssets.ChrModels.Delinquent.Head.face:Destroy()
+game.ReplicatedStorage.StreamedAssets.ChrModels.Delinquent.Pants.PantsTemplate = "rbxassetid://1983315399"
+game.ReplicatedStorage.StreamedAssets.ChrModels.Delinquent.Shirt.ShirtTemplate = "http://www.roblox.com/asset/?id=2177773400"
+
+local vm = game:GetService("ReplicatedStorage").Viewmodels.Arms.Delinquent
+vm.Name = "Holder"
+local toName = game:GetService("ReplicatedStorage").Viewmodels.Arms["Monky"]
+toName.Name = "Delinquent"
+
+game:GetService("ReplicatedStorage").FavoriteWeapons.Delinquent.Value = "Potassium Power"
+
+game:GetService("ReplicatedStorage").ItemData.Images.Skins.Delinquent.Quality.Value = "Promo"
+
+local Config =
+{
+    ProtectedName = "Monky, but Naked?", --What the protected name should be called. (Go to line 51)
+    OtherPlayers = false, --If other players should also have protected names.
+    OtherPlayersTemplate = "NameProtect", --Template for other players protected name (ex: "NamedProtect" will turn into "NameProtect1" for first player and so on)
+    RenameTextBoxes = false, --If TextBoxes should be renamed. (could cause issues with admin guis/etc)
+    UseFilterPadding = false, --If filtered name should be the same size as a regular name.
+    FilterPad = " ", --Character used to filter pad.
+    UseMetatableHook = true, --Use metatable hook to increase chance of filtering. (is not supported on wrappers like bleu)
+    UseAggressiveFiltering = true --Use aggressive property renaming filter. (renames a lot more but at the cost of lag)
+}
+
+local ProtectedNames = {}
+local Counter = 1
+if Config.OtherPlayers then
+    for I, V in pairs(game:GetService("Players"):GetPlayers()) do
+        local Filter = Config.OtherPlayersTemplate .. tostring(Counter)
+        if Config.UseFilterPadding then
+            if string.len(Filter) > string.len(V.Name) then
+                Filter = string.sub(Filter, 1, string.len(V.Name))
+            elseif string.len(Filter) < string.len(V.Name) then
+                local Add = string.len(V.Name) - string.len(Filter)
+                for I=1,Add do
+                    Filter = Filter .. Config.FilterPad
+                end
+            end
+        end
+        ProtectedNames[V.Name] = Filter
+        Counter = Counter + 1
+    end
+
+    game:GetService("Players").PlayerAdded:connect(function(Player)
+        local Filter = Config.OtherPlayersTemplate .. tostring(Counter)
+        if Config.UseFilterPadding then
+            if string.len(Filter) > string.len(V.Name) then
+                Filter = string.sub(Filter, 1, string.len(V.Name))
+            elseif string.len(Filter) < string.len(V.Name) then
+                local Add = string.len(V.Name) - string.len(Filter)
+                for I=1,Add do
+                    Filter = Filter .. Config.FilterPad
+                end
+            end
+        end
+        ProtectedNames[Player.Name] = Filter
+        Counter = Counter + 1
+    end)
+end
