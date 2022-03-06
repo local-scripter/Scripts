@@ -194,7 +194,9 @@ elseif c.Name == "Auto" then
 c.Value = true
 elseif c.Name == "FireRate" or c.Name == "BFireRate" then
 c.Value = 0.20
-
+end
+end
+end
 game:GetService('RunService').Stepped:connect(function()
         game:GetService("Players").LocalPlayer.PlayerGui.GUI.Client.Variables.ammocount.Value = 999
         game:GetService("Players").LocalPlayer.PlayerGui.GUI.Client.Variables.ammocount2.Value = 999
