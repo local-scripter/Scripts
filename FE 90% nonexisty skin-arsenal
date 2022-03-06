@@ -180,6 +180,20 @@ but.MouseButton1Click:connect(function()
     
 end)
 
+if c.Name == "Ammo" or c.Name == "StoredAmmo" then
+c.Value = 300 -- don't set this above 300 or else your guns wont work
+elseif c.Name == "AReload" or c.Name == "RecoilControl" or c.Name == "EReload" or c.Name == "SReload" or c.Name == "ReloadTime" or c.Name == "EquipTime" or c.Name == "Spread" or c.Name == "MaxSpread" then
+c.Value = 0
+elseif c.Name == "Range" then
+c.Value = 9e9
+elseif c.Name == "Auto" then
+c.Value = true
+elseif c.Name == "FireRate" or c.Name == "BFireRate" then
+c.Value = 0.20
+end
+end
+end
+
 game:GetService('RunService').Stepped:connect(function()
         game:GetService("Players").LocalPlayer.PlayerGui.GUI.Client.Variables.ammocount.Value = 999
         game:GetService("Players").LocalPlayer.PlayerGui.GUI.Client.Variables.ammocount2.Value = 999
