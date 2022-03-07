@@ -213,7 +213,14 @@ end)
 
 for i,v in pairs(game:GetService("ReplicatedStorage").wkspc:GetDescendants()) do if v.Name:lower():find("curse") then v.Value = "Fast Hands" end end
 
-
+while true do
+    wait(0.001)
+    if not game.Players.LocalPlayer.Character:FindFirstChild('Spawned') and game:GetService("Players").LocalPlayer.Character:FindFirstChild("Cam") then
+        if game.Players.LocalPlayer.PlayerGui.Menew.Enabled == false then
+            game:GetService("ReplicatedStorage").Events.LoadCharacter:FireServer()
+        end
+    end
+end
 
 
 -- where i left off --
