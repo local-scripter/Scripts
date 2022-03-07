@@ -36,8 +36,9 @@ local toName = game:GetService("ReplicatedStorage").Viewmodels.Arms["Nonexisty"]
 toName.Name = "Delinquent"
 local Core = getsenv(game.Players.LocalPlayer.PlayerGui.Menew.LocalScript);
 
-
-
+if game.Players.LocalPlayer.Character:FindFirstChild("HeadHB")then
+            game.Players.LocalPlayer.Character:FindFirstChild("HeadHB"):Destroy()
+        end
 
 local player = game.Players.LocalPlayer
 print(player.Name)
