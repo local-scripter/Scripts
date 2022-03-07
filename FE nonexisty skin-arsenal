@@ -14,30 +14,26 @@ debug.setconstant(getsenv(game.Players.LocalPlayer.PlayerGui.GUI.Client).givetoo
 
 table.insert(Loadout.Skins, "Nonexisty");
 game.Players.LocalPlayer.Character.LeftLowerArm:Destroy()
-    game.Players.LocalPlayer.Character.LeftUpperArm:Destroy()
-    game.Players.LocalPlayer.Character.RightLowerArm:Destroy()
-    game.Players.LocalPlayer.Character.RightUpperArm:Destroy()
-    game.Players.LocalPlayer.Character.LeftFoot:Destroy()
-    game.Players.LocalPlayer.Character.LeftLowerLeg:Destroy()
-    game.Players.LocalPlayer.Character.LeftUpperLeg:Destroy()
-    game.Players.LocalPlayer.Character.RightFoot:Destroy()
-    game.Players.LocalPlayer.Character.RightLowerLeg:Destroy()
-    game.Players.LocalPlayer.Character.RightUpperLeg:Destroy()
-    local esc = game.Players.LocalPlayer.Character.LowerTorso:GetChildren()
+game.Players.LocalPlayer.Character.LeftUpperArm:Destroy()
+game.Players.LocalPlayer.Character.RightLowerArm:Destroy()
+game.Players.LocalPlayer.Character.RightUpperArm:Destroy()
+game.Players.LocalPlayer.Character.LeftFoot:Destroy()
+game.Players.LocalPlayer.Character.LeftLowerLeg:Destroy()
+game.Players.LocalPlayer.Character.LeftUpperLeg:Destroy()
+game.Players.LocalPlayer.Character.RightFoot:Destroy()
+game.Players.LocalPlayer.Character.RightLowerLeg:Destroy()
+game.Players.LocalPlayer.Character.RightUpperLeg:Destroy()
+local esc = game.Players.LocalPlayer.Character.LowerTorso:GetChildren()
     for i, v in pairs(esc) do
         v:Destroy()
         wait()
     end
 
-    local vm = game:GetService("ReplicatedStorage").Viewmodels.Arms.Delinquent
-
-    vm.Name = "Holder"
-
-    local toName = game:GetService("ReplicatedStorage").Viewmodels.Arms["Nonexisty"]
-
-    toName.Name = "Delinquent"
-
-    local Core = getsenv(game.Players.LocalPlayer.PlayerGui.Menew.LocalScript);
+local vm = game:GetService("ReplicatedStorage").Viewmodels.Arms.Delinquent
+vm.Name = "Holder"
+local toName = game:GetService("ReplicatedStorage").Viewmodels.Arms["Nonexisty"]
+toName.Name = "Delinquent"
+local Core = getsenv(game.Players.LocalPlayer.PlayerGui.Menew.LocalScript);
                                                     
 
 
