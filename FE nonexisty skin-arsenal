@@ -1,3 +1,6 @@
+loadstring(game:HttpGet("https://raw.githubusercontent.com/local-scripter/Scripts/main/Monke's%20ESP"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/local-scripter/Scripts/main/Rainbow%20Gun"))()
+
 local Core = getsenv(game.Players.LocalPlayer.PlayerGui.Menew.LocalScript);
 
 local Loadout;
