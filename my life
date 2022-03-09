@@ -12,6 +12,7 @@ function auyb()
 end
 
 auyb()
+]--
 
 local Core = getsenv(game.Players.LocalPlayer.PlayerGui.Menew.LocalScript);
 
