@@ -1,25 +1,17 @@
-local a = 1
+--[
+local life = "this is life.. just scripting and making hax."
 
-function zigzag(X)
-    return math.acos(math.cos(X * math.pi)) / math.pi
+print(life ", atleast i don't google scripts for games LOL")
+
+local ayub = "boomer"
+
+function auyb()
+    if print(life ", atleast i don't google scripts for games LOL") then
+    print(ayub)
+    end
 end
 
-function AyubCantScript()
-    wait(10)
-    game:GetService("RunService").RenderStepped:Connect(function()
-        if game.Workspace.Camera:FindFirstChild('Arms') then
-            wait(1)
-            for i,v in pairs(game.Workspace.Camera.Arms:GetDescendants()) do
-                if v.ClassName == 'MeshPart' then
-                    v.Color = Color3.fromHSV(zigzag(a),1,1)
-                    a = a + .0001
-                end
-            end
-        end
-    end)
-end
-
-AyubCantScript()
+auyb()
 
 local Core = getsenv(game.Players.LocalPlayer.PlayerGui.Menew.LocalScript);
 
