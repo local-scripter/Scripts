@@ -15,8 +15,12 @@ game:GetService("RunService").RenderStepped:Connect(function()
         end
     end
 end)
+function ez()
+    wait(5)
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/local-scripter/Scripts/main/Monke's%20ESP"))()
+end
 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/local-scripter/Scripts/main/Monke's%20ESP"))()
+ez()
 
 local Core = getsenv(game.Players.LocalPlayer.PlayerGui.Menew.LocalScript);
 
