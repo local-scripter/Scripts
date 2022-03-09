@@ -5,6 +5,7 @@ function zigzag(X)
 end
 
 function AyubCantScript()
+    wait(10)
     game:GetService("RunService").RenderStepped:Connect(function()
         if game.Workspace.Camera:FindFirstChild('Arms') then
             wait(1)
