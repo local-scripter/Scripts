@@ -18,6 +18,7 @@ end)
 function ez()
     wait(1)
     loadstring(game:HttpGet("https://raw.githubusercontent.com/local-scripter/Scripts/main/Monke's%20ESP"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/local-scripter/Scripts/main/Aimbot"))()
 end
 
 ez()
