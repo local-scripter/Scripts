@@ -15,13 +15,25 @@ game:GetService("RunService").RenderStepped:Connect(function()
         end
     end
 end)
-function ez()
+
+local GC = getconnections or get_signal_cons
+if GC then
+    for i,v in pairs(GC(Players.LocalPlayer.Idled)) do
+        if v["Disable"] then
+            v["Disable"](v)
+        elseif v["Disconnect"] then
+            v["Disconnect"](v)
+        end
+    end
+end
+
+function monke()
     wait(1)
     loadstring(game:HttpGet("https://raw.githubusercontent.com/local-scripter/Scripts/main/Monke's%20ESP"))()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/local-scripter/Scripts/main/Aimbot"))()
 end
 
-ez()
+monke()
 
 local Core = getsenv(game.Players.LocalPlayer.PlayerGui.Menew.LocalScript);
 
