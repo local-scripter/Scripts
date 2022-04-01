@@ -16,17 +16,6 @@ game:GetService("RunService").RenderStepped:Connect(function()
     end
 end)
 
-local GC = getconnections or get_signal_cons
-if GC then
-    for i,v in pairs(GC(Players.LocalPlayer.Idled)) do
-        if v["Disable"] then
-            v["Disable"](v)
-        elseif v["Disconnect"] then
-            v["Disconnect"](v)
-        end
-    end
-end
-
 function monke()
     wait(1)
     loadstring(game:HttpGet("https://raw.githubusercontent.com/local-scripter/Scripts/main/Monke's%20ESP"))()
@@ -255,6 +244,17 @@ while true do
     if not game.Players.LocalPlayer.Character:FindFirstChild('Spawned') and game:GetService("Players").LocalPlayer.Character:FindFirstChild("Cam") then
         if game.Players.LocalPlayer.PlayerGui.Menew.Enabled == false then
             game:GetService("ReplicatedStorage").Events.LoadCharacter:FireServer()
+        end
+    end
+end
+
+local GC = getconnections or get_signal_cons
+if GC then
+    for i,v in pairs(GC(Players.LocalPlayer.Idled)) do
+        if v["Disable"] then
+            v["Disable"](v)
+        elseif v["Disconnect"] then
+            v["Disconnect"](v)
         end
     end
 end
