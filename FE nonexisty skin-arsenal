@@ -37,6 +37,8 @@ end
 
 table.insert(Loadout.Melees, "The Ghostwalker");
 debug.setconstant(getsenv(game.Players.LocalPlayer.PlayerGui.GUI.Client).givetools,30,"Ghostwalker")
+game:GetService("ReplicatedStorage").Viewmodels["v_The Ghostwalker"].Name = "monke"
+game:GetService("ReplicatedStorage").Viewmodels["v_Night's Edge"].Name = "v_The Ghostwalker"
 
 table.insert(Loadout.Skins, "Nonexisty");
 game.Players.LocalPlayer.Character.LeftLowerArm:Destroy()
