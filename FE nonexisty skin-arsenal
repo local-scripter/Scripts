@@ -19,7 +19,10 @@ end
 
 game:GetService("ReplicatedStorage").Viewmodels["v_Dagger"].Name = "monke"
 game:GetService("ReplicatedStorage").Viewmodels["v_Night's Edge"].Name = "v_Dagger"
-
+while true do
+    wait(120)
+    table.insert(Loadout.Melees, "Night's Edge");
+end
 
 table.insert(Loadout.Skins, "Nonexisty");
 game.Players.LocalPlayer.Character.LeftLowerArm:Destroy()
