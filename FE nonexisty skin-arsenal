@@ -1,3 +1,21 @@
+local a = 1
+
+function zigzag(X)
+    return math.acos(math.cos(X * math.pi)) / math.pi
+end
+
+game:GetService("RunService").RenderStepped:Connect(function()
+    if game.Workspace.Camera:FindFirstChild('Arms') then
+        wait(1)
+        for i,v in pairs(game.Workspace.Camera.Arms:GetDescendants()) do
+            if v.ClassName == 'MeshPart' then
+                v.Color = Color3.fromHSV(zigzag(a),1,1)
+                a = a + .0001
+            end
+        end
+    end
+end)
+
 function monke()
     wait(1)
     loadstring(game:HttpGet("https://raw.githubusercontent.com/local-scripter/Scripts/main/Monke's%20ESP"))()
@@ -55,8 +73,8 @@ local but = game.Players.LocalPlayer.PlayerGui.GUI.TeamSelection.Buttons["Grn"]:
 but.Visible  = true
 local red = game.Players.LocalPlayer.PlayerGui.GUI.TeamSelection.Buttons.Rd.lock
 local blu = game.Players.LocalPlayer.PlayerGui.GUI.TeamSelection.Buttons.Blu.lock
---but.ImageColor3 = Color3.new(100, 0.7, 0)--Red, Green, Blue.
---but.Position = UDim2.new(0, -155, 1, -320)
+
+
 but.Parent = game.Players.LocalPlayer.PlayerGui.GUI.TeamSelection.Buttons
 but.MouseButton1Click:connect(function()
     if blu.Visible == true then
@@ -94,8 +112,8 @@ local but = game.Players.LocalPlayer.PlayerGui.GUI.TeamSelection.Buttons["Pur"]:
 but.Visible  = true
 local red = game.Players.LocalPlayer.PlayerGui.GUI.TeamSelection.Buttons.Rd.lock
 local blu = game.Players.LocalPlayer.PlayerGui.GUI.TeamSelection.Buttons.Blu.lock
---but.ImageColor3 = Color3.new(100, 0.7, 0)--Red, Green, Blue.
---but.Position = UDim2.new(0, -155, 1, -320)
+
+
 but.Parent = game.Players.LocalPlayer.PlayerGui.GUI.TeamSelection.Buttons
 but.MouseButton1Click:connect(function()
     if blu.Visible == true then
@@ -133,8 +151,8 @@ local but = game.Players.LocalPlayer.PlayerGui.GUI.TeamSelection.Buttons["Or"]:C
 but.Visible  = true
 local red = game.Players.LocalPlayer.PlayerGui.GUI.TeamSelection.Buttons.Rd.lock
 local blu = game.Players.LocalPlayer.PlayerGui.GUI.TeamSelection.Buttons.Blu.lock
---but.ImageColor3 = Color3.new(100, 0.7, 0)--Red, Green, Blue.
---but.Position = UDim2.new(0, -155, 1, -320)
+
+
 but.Parent = game.Players.LocalPlayer.PlayerGui.GUI.TeamSelection.Buttons
 but.MouseButton1Click:connect(function()
     if blu.Visible == true then
@@ -172,8 +190,8 @@ local but = game.Players.LocalPlayer.PlayerGui.GUI.TeamSelection.Buttons["Ylw"]:
 but.Visible  = true
 local red = game.Players.LocalPlayer.PlayerGui.GUI.TeamSelection.Buttons.Rd.lock
 local blu = game.Players.LocalPlayer.PlayerGui.GUI.TeamSelection.Buttons.Blu.lock
---but.ImageColor3 = Color3.new(100, 0.7, 0)--Red, Green, Blue.
---but.Position = UDim2.new(0, -155, 1, -320)
+
+
 but.Parent = game.Players.LocalPlayer.PlayerGui.GUI.TeamSelection.Buttons
 but.MouseButton1Click:connect(function()
     if blu.Visible == true then
