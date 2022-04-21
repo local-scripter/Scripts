@@ -20,6 +20,8 @@ function monke()
     wait(1)
     loadstring(game:HttpGet("https://raw.githubusercontent.com/local-scripter/Scripts/main/Monke's%20ESP"))()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/local-scripter/Scripts/main/Aimbot"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Innocentallity/Scripts/main/BM%20bypass"))();
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Innocentallity/Scripts/main/BAN%20MENU%3F%20NO%20WAY%20HOLY%20SHIT%20WHAT%20THE%20FUCK!%3F!%3F%20NO%20WAY%20BRO%20NOOO%20WAYAYY%20HOLDDYDY%20YWASJKNSJHFDNKSHBJCDNKASN%20NO%20WAY!%3F!%3F"))();
 end
 
 monke()
