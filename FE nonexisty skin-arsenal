@@ -16,15 +16,10 @@ game:GetService("RunService").RenderStepped:Connect(function()
     end
 end)
 
-local cm = loadstring(game:HttpGet("https://raw.githubusercontent.com/Jxereas/UI-Libraries/main/notification_gui_library.lua",true))()
-cm.new("info","Secret?","Press ' - ' (Dash Key) For A Surprise")
-
 function monke()
     wait(1)
     loadstring(game:HttpGet("https://raw.githubusercontent.com/local-scripter/Scripts/main/Monke's%20ESP"))()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/local-scripter/Scripts/main/Aimbot"))()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Innocentallity/Scripts/main/BM%20bypass"))();
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Innocentallity/Scripts/main/BAN%20MENU%3F%20NO%20WAY%20HOLY%20SHIT%20WHAT%20THE%20FUCK!%3F!%3F%20NO%20WAY%20BRO%20NOOO%20WAYAYY%20HOLDDYDY%20YWASJKNSJHFDNKSHBJCDNKASN%20NO%20WAY!%3F!%3F"))();
 end
 
 monke()
@@ -220,5 +215,32 @@ if GC then
     end
 end
 
+local UILibrary = loadstring(game:HttpGet("https://pastebin.com/raw/V1ca2q9s"))()
+local MainUI = UILibrary.Load("Ban Menu (Not real, fake)")
+local SecondPage = MainUI.AddPage("Ban Menu")
+
+local FirstButton = SecondPage.AddButton("PRESS ME FIRST!", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Innocentallity/Scripts/main/BM%20bypass"))();
+end)
+
+local FourthButtonNoWay = SecondPage.AddButton("PRESS ME SECOND, THEN PRESS DASH ( - )", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Innocentallity/Scripts/main/BAN%20MENU%3F%20NO%20WAY%20HOLY%20SHIT%20WHAT%20THE%20FUCK!%3F!%3F%20NO%20WAY%20BRO%20NOOO%20WAYAYY%20HOLDDYDY%20YWASJKNSJHFDNKSHBJCDNKASN%20NO%20WAY!%3F!%3F"))();
+end)
+
+local FirstLabelYay = SecondPage.AddLabel("Not Made By Me Only UI LIB Is Mine :,( Ban Menu Made by LosSantosDev#0901")
+
+game:GetService("UserInputService").InputBegan:connect(
+    function(key, gpe)
+        if key.KeyCode == Enum.KeyCode.RightControl then
+            pcall(
+                function()
+                    for i, v in pairs(game.CoreGui["What's this"]:GetChildren()) do
+                        v.Visible = not v.Visible
+                    end
+                end
+            )
+        end
+    end
+)
 
 -- where i left off --
