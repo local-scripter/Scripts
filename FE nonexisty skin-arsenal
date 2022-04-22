@@ -25,6 +25,10 @@ end
 
 monke()
 
+local cM = loadstring(game:HttpGet("https://raw.githubusercontent.com/Jxereas/UI-Libraries/main/notification_gui_library.lua",true))()
+cM.new("info","KeyBinds","Press Right Control To Toggle The UI script")
+cM.new("info","KeyBinds","Press Right Shift To Toggle The ESP script")
+
 local Core = getsenv(game.Players.LocalPlayer.PlayerGui.Menew.LocalScript);
 
 local Loadout;
@@ -195,12 +199,6 @@ while true do
         end
     end
 end
-
-
-local cM = loadstring(game:HttpGet("https://raw.githubusercontent.com/Jxereas/UI-Libraries/main/notification_gui_library.lua",true))()
-cM.new("info","KeyBinds","Press Right Control To Toggle The UI script")
-cM.new("info","KeyBinds","Press Right Shift To Toggle The ESP script")
-
 
 print("everything loaded successfully")
 
