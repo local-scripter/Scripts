@@ -10,14 +10,15 @@ local FourthButtonNoWay = SecondPage.AddButton("PRESS ME SECOND, THEN PRESS DASH
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Innocentallity/Scripts/main/BAN%20MENU%3F%20NO%20WAY%20HOLY%20SHIT%20WHAT%20THE%20FUCK!%3F!%3F%20NO%20WAY%20BRO%20NOOO%20WAYAYY%20HOLDDYDY%20YWASJKNSJHFDNKSHBJCDNKASN%20NO%20WAY!%3F!%3F"))();
 end)
 
-local FirstLabelYay = SecondPage.AddLabel("Not Made By Me Only UI LIB Is Mine :,( Ban Menu Made by LosSantosDev#0901")
+local FirstLabelYay = SecondPage.AddLabel("Ban Menu - LosSantosDev#0901")
+local SecondLabel = SecondPage.AddLabel("UI LIB - monke(uncletan(me))")
 
 game:GetService("UserInputService").InputBegan:connect(
     function(key, gpe)
         if key.KeyCode == Enum.KeyCode.RightControl then
             pcall(
                 function()
-                    for i, v in pairs(game.CoreGui["What's this"]:GetChildren()) do
+                    for i, v in pairs(game.CoreGui["Ban Menu (Not real, fake)"]:GetChildren()) do
                         v.Visible = not v.Visible
                     end
                 end
