@@ -1,6 +1,7 @@
 local UILibrary = loadstring(game:HttpGet("https://pastebin.com/raw/V1ca2q9s"))()
-local MainUI = UILibrary.Load("Ban Menu (Not real, fake)")
-local SecondPage = MainUI.AddPage("Ban Menu")
+local MainUI = UILibrary.Load("Ban Menu (With many Other UI's)")
+local SecondPage = MainUI.AddPage("UI's")
+local ThirdPage = MainUI.AddPage("Credits")
 
 local FirstButton = SecondPage.AddButton("PRESS ME FIRST!", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Innocentallity/Scripts/main/BM%20bypass"))();
@@ -10,15 +11,85 @@ local FourthButtonNoWay = SecondPage.AddButton("PRESS ME SECOND, THEN PRESS DASH
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Innocentallity/Scripts/main/BAN%20MENU%3F%20NO%20WAY%20HOLY%20SHIT%20WHAT%20THE%20FUCK!%3F!%3F%20NO%20WAY%20BRO%20NOOO%20WAYAYY%20HOLDDYDY%20YWASJKNSJHFDNKSHBJCDNKASN%20NO%20WAY!%3F!%3F"))();
 end)
 
-local FirstLabelYay = SecondPage.AddLabel("Ban Menu - LosSantosDev#0901")
-local SecondLabel = SecondPage.AddLabel("UI LIB - monke(uncletan(me))")
+local SecondButton = SecondPage.AddButton("St. Patricks Day", function()
+    if game:GetService("Players")["TNQR_Eternalwombat"].PlayerGui.Menew.Main.CloversR.Visible == true then
+        game:GetService("Players")["TNQR_Eternalwombat"].PlayerGui.Menew.Main.CloversR.Visible = false
+    elseif game:GetService("Players")["TNQR_Eternalwombat"].PlayerGui.Menew.Main.CloversR.Visible == false then
+        game:GetService("Players")["TNQR_Eternalwombat"].PlayerGui.Menew.Main.CloversR.Visible = true
+    end
+
+    if game:GetService("Players")["TNQR_Eternalwombat"].PlayerGui.Menew.Main.CloversL.Visible == true then
+        game:GetService("Players")["TNQR_Eternalwombat"].PlayerGui.Menew.Main.CloversL.Visible = false
+    elseif game:GetService("Players")["TNQR_Eternalwombat"].PlayerGui.Menew.Main.CloversL.Visible == false then
+        game:GetService("Players")["TNQR_Eternalwombat"].PlayerGui.Menew.Main.CloversL.Visible = true
+    end
+
+    if game:GetService("Players")["TNQR_Eternalwombat"].PlayerGui.Menew.Main.PatrickShine.Visible == true then
+        game:GetService("Players")["TNQR_Eternalwombat"].PlayerGui.Menew.Main.PatrickShine.Visible = false
+    elseif game:GetService("Players")["TNQR_Eternalwombat"].PlayerGui.Menew.Main.PatrickShine.Visible == false then
+        game:GetService("Players")["TNQR_Eternalwombat"].PlayerGui.Menew.Main.PatrickShine.Visible = true 
+    end
+
+    if game:GetService("Players")["TNQR_Eternalwombat"].PlayerGui.Menew.Main.PatrickToggle.Visible == true then
+        game:GetService("Players")["TNQR_Eternalwombat"].PlayerGui.Menew.Main.PatrickToggle.Visible = false
+    elseif game:GetService("Players")["TNQR_Eternalwombat"].PlayerGui.Menew.Main.PatrickToggle.Visible == false then
+        game:GetService("Players")["TNQR_Eternalwombat"].PlayerGui.Menew.Main.PatrickToggle.Visible = true 
+    end
+end)
+
+local MoreButton = SecondPage.AddButton("Vote Kick Back?", function()
+    if game:GetService("Players")["TNQR_Eternalwombat"].PlayerGui.votekickMenu.Enabled == true then
+        game:GetService("Players")["TNQR_Eternalwombat"].PlayerGui.votekickMenu.Enabled = false         
+    elseif game:GetService("Players")["TNQR_Eternalwombat"].PlayerGui.votekickMenu.Enabled == false then
+        game:GetService("Players")["TNQR_Eternalwombat"].PlayerGui.votekickMenu.Enabled = true
+    end
+end)
+
+local SixthButtonOrFifth = SecondPage.AddButton("Xonae Code Maker", function()
+    if game:GetService("Players")["TNQR_Eternalwombat"].PlayerGui.Menew.Twitter.Visible == true then
+        game:GetService("Players")["TNQR_Eternalwombat"].PlayerGui.Menew.Twitter.Visible = false
+    elseif game:GetService("Players")["TNQR_Eternalwombat"].PlayerGui.Menew.Twitter.Visible == false then
+        game:GetService("Players")["TNQR_Eternalwombat"].PlayerGui.Menew.Twitter.Visible = true 
+    end
+end)
+
+local SixthButton = SecondPage.AddButton("VIP Menu (does nothing)", function()
+    if game:GetService("Players")["TNQR_Eternalwombat"].PlayerGui.Vip.Enabled == true then
+        game:GetService("Players")["TNQR_Eternalwombat"].PlayerGui.Vip.Enabled = false
+    elseif game:GetService("Players")["TNQR_Eternalwombat"].PlayerGui.Vip.Enabled == false then
+        game:GetService("Players")["TNQR_Eternalwombat"].PlayerGui.Vip.Enabled = true 
+    end
+end)
+
+local TooManyButtons = SecondPage.AddButton("YouTube Panel", function()
+    if game:GetService("Players")["TNQR_Eternalwombat"].PlayerGui.CreatorPanel.Main.Visible == true then
+        game:GetService("Players")["TNQR_Eternalwombat"].PlayerGui.CreatorPanel.Main.Visible = false
+    elseif game:GetService("Players")["TNQR_Eternalwombat"].PlayerGui.CreatorPanel.Main.Visible == false then
+        game:GetService("Players")["TNQR_Eternalwombat"].PlayerGui.CreatorPanel.Main.Visible = true 
+    end
+end)
+
+local INeedToStopWithButtons = SecondPage.AddButton("Make A Custom GameMode", function()
+    if game:GetService("Players")["TNQR_Eternalwombat"].PlayerGui.CustomModeSetup.Enabled == true then
+        game:GetService("Players")["TNQR_Eternalwombat"].PlayerGui.CustomModeSetup.Enabled = false
+   elseif game:GetService("Players")["TNQR_Eternalwombat"].PlayerGui.CustomModeSetup.Enabled == false then
+        game:GetService("Players")["TNQR_Eternalwombat"].PlayerGui.CustomModeSetup.Enabled = true 
+    end
+end)
+
+game:GetService("Players")["TNQR_Eternalwombat"].PlayerGui.Menew.MainExtras.Background.GMContent.Clown.Visible = true
+game:GetService("Players")["TNQR_Eternalwombat"].PlayerGui.Menew.MainExtras.Background.GMContent["Co-op"].Visible = true
+game:GetService("Players")["TNQR_Eternalwombat"].PlayerGui.Menew.MainExtras.Background.GMContent.Bombfest.Visible = true
+
+local FirstLabelYay = ThirdPage.AddLabel("Ban Menu - LosSantosDev#0901")
+local SecondLabel = ThirdPage.AddLabel("UI LIB - monke(uncletan(me))")
 
 game:GetService("UserInputService").InputBegan:connect(
     function(key, gpe)
         if key.KeyCode == Enum.KeyCode.RightControl then
             pcall(
                 function()
-                    for i, v in pairs(game.CoreGui["Ban Menu (Not real, fake)"]:GetChildren()) do
+                    for i, v in pairs(game.CoreGui["Ban Menu (With many Other UI's)"]:GetChildren()) do
                         v.Visible = not v.Visible
                     end
                 end
@@ -26,3 +97,10 @@ game:GetService("UserInputService").InputBegan:connect(
         end
     end
 )
+
+
+
+
+
+
+
