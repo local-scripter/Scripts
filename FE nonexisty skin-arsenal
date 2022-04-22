@@ -214,5 +214,6 @@ if GC then
     end
 end
 
+print("everything loaded successfully")
 
 -- where i left off --
