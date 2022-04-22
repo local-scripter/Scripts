@@ -69,7 +69,6 @@ local Core = getsenv(game.Players.LocalPlayer.PlayerGui.Menew.LocalScript);
 
 
 local player = game.Players.LocalPlayer
-print(player.Name)
 local but = game.Players.LocalPlayer.PlayerGui.GUI.TeamSelection.Buttons["Grn"]:Clone()
 but.Visible  = true
 local red = game.Players.LocalPlayer.PlayerGui.GUI.TeamSelection.Buttons.Rd.lock
@@ -94,7 +93,6 @@ but.MouseButton1Click:connect(function()
 end)
 
 local player = game.Players.LocalPlayer
-print(player.Name)
 local but = game.Players.LocalPlayer.PlayerGui.GUI.TeamSelection.Buttons["Pur"]:Clone()
 but.Visible  = true
 local red = game.Players.LocalPlayer.PlayerGui.GUI.TeamSelection.Buttons.Rd.lock
@@ -119,7 +117,6 @@ but.MouseButton1Click:connect(function()
 end)
 
 local player = game.Players.LocalPlayer
-print(player.Name)
 local but = game.Players.LocalPlayer.PlayerGui.GUI.TeamSelection.Buttons["Or"]:Clone()
 but.Visible  = true
 local red = game.Players.LocalPlayer.PlayerGui.GUI.TeamSelection.Buttons.Rd.lock
@@ -144,7 +141,6 @@ but.MouseButton1Click:connect(function()
 end)
 
 local player = game.Players.LocalPlayer
-print(player.Name)
 local but = game.Players.LocalPlayer.PlayerGui.GUI.TeamSelection.Buttons["Ylw"]:Clone()
 but.Visible  = true
 local red = game.Players.LocalPlayer.PlayerGui.GUI.TeamSelection.Buttons.Rd.lock
@@ -168,9 +164,6 @@ but.MouseButton1Click:connect(function()
     game.Players.LocalPlayer.PlayerGui.GUI.BottomFrame.Visible = false
 end)
 
-game:GetService("Players").LocalPlayer.PlayerGui.GUI.TeamSelection.Buttons.Ylw.lock:Destroy()
-game:GetService("Players").LocalPlayer.PlayerGui.GUI.TeamSelection.Buttons.Grn.lock:Destroy()
-
 for i,v in next, game.ReplicatedStorage.Weapons:GetChildren() do
 for i,c in next, v:GetChildren() do 
 for i,x in next, getconnections(c.Changed) do
@@ -190,8 +183,8 @@ end
 end
 end
 game:GetService('RunService').Stepped:connect(function()
-        game:GetService("Players").LocalPlayer.PlayerGui.GUI.Client.Variables.ammocount.Value = 999
-        game:GetService("Players").LocalPlayer.PlayerGui.GUI.Client.Variables.ammocount2.Value = 999
+    game:GetService("Players").LocalPlayer.PlayerGui.GUI.Client.Variables.ammocount.Value = 999
+    game:GetService("Players").LocalPlayer.PlayerGui.GUI.Client.Variables.ammocount2.Value = 999
 end)
 
 while true do
