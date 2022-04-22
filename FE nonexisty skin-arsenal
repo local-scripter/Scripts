@@ -203,6 +203,12 @@ while true do
     end
 end
 
+
+local cM = loadstring(game:HttpGet("https://raw.githubusercontent.com/Jxereas/UI-Libraries/main/notification_gui_library.lua",true))()
+cM.new("info","KeyBinds","Press Right Control To Toggle The UI script")
+cM.new("info","KeyBinds","Press Right Shift To Toggle The ESP script")
+
+
 local GC = getconnections or get_signal_cons
 if GC then
     for i,v in pairs(GC(Players.LocalPlayer.Idled)) do
