@@ -40,8 +40,7 @@ for i,v in pairs(getupvalues(Core.ViewItems)) do
     end
 end
 
-game:GetService("ReplicatedStorage").ItemData.Images.Melees["Dagger"].Name = "adasd"
-game:GetService("ReplicatedStorage").ItemData.Images.Melees["Night's Edge"].Name = "Dagger"
+
 game:GetService("ReplicatedStorage").Viewmodels["v_Dagger"].Name = "monke"
 game:GetService("ReplicatedStorage").Viewmodels["v_Night's Edge"].Name = "v_Dagger"
 
